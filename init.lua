@@ -22,7 +22,7 @@ vim.keymap.set('n', 'fh', builtin.help_tags, {})
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.cmd[[set foldmethod=syntax]]--('autocmd FileType c setlocal foldmethod=syntax')
+--vim.cmd[[set foldmethod=syntax]]--('autocmd FileType c setlocal foldmethod=syntax')
 
 --vim.g.tokyonight_transparent = true 
 --vim.g.tokyonight_transparent_sidebar = true
