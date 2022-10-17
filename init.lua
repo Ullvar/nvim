@@ -4,6 +4,7 @@ require('tokyonight').setup({
 	transparent = true
 })
 
+
 vim.api.nvim_create_user_command(
     'Format',
     function(opts)
@@ -28,6 +29,36 @@ vim.cmd[[set foldmethod=syntax]]--('autocmd FileType c setlocal foldmethod=synta
 vim.cmd[[colorscheme tokyonight]]
 
 vim.g.mapleader = " "
+
+
+local hl = function(thing, opts)
+	vim.api.nvim_set_hl(0, thing, opts)
+end
+
+hl("SignColumn", {
+	bg = "none",
+})
+
+hl("ColorColumn", {
+	ctermbg = 0,
+	bg = "#555555",
+})
+
+hl("CursorLineNR", {
+	bg = "None"
+})
+
+hl("Normal", {
+	bg = "none"
+})
+
+hl("LineNr", {
+	fg = "#5eacd3"
+})
+
+hl("netrwDir", {
+	fg = "#5eacd3"
+})
 
 -- @@@@@@@@@@@@@ COC @@@@@@@@@@@@@ 
 -- Some servers have issues with backup files, see #649.
