@@ -13,6 +13,8 @@ vim.api.nvim_create_user_command(
     { nargs = 1 }
 )
 
+
+-- Telescope stuff
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', 'ff', builtin.find_files, {})
 vim.keymap.set('n', 'fg', builtin.live_grep, {})
@@ -28,8 +30,12 @@ vim.opt.relativenumber = true
 --vim.g.tokyonight_transparent_sidebar = true
 vim.cmd[[colorscheme tokyonight]]
 
-vim.g.mapleader = " "
+vim.g.mapleader = ","
 
+-- Harpoon stuff
+vim.keymap.set("n", "<leader>;a", ":lua require('harpoon.mark').add_file()<CR>", {})
+vim.keymap.set("n", "<leader>;t", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", {})
+vim.keymap.set('n', '<leader>h', '<cmd>lua require("harpoon.ui").nav_file(vim.v.count1)<cr>', opts)
 
 local hl = function(thing, opts)
 	vim.api.nvim_set_hl(0, thing, opts)
