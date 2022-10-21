@@ -131,6 +131,8 @@ vim.keymap.set("n", "<leader>;a", ":lua require('harpoon.mark').add_file()<CR>",
 vim.keymap.set("n", "<leader>;t", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", {})
 vim.keymap.set('n', '<leader>h', '<cmd>lua require("harpoon.ui").nav_file(vim.v.count1)<cr>', opts)
 
+vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
+
 local hl = function(thing, opts)
 	vim.api.nvim_set_hl(0, thing, opts)
 end
