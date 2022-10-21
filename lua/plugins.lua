@@ -14,7 +14,21 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+
+  use {
+   'lewis6991/gitsigns.nvim'
+  }
+
   use 'ThePrimeagen/harpoon'
+
+
+
   use 'folke/tokyonight.nvim'
+
+  -- Debugging
+  use 'mfussenegger/nvim-dap'
+  use "rcarriga/nvim-dap-ui"
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'mfussenegger/nvim-dap-python'
 end)
 
