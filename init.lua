@@ -6,7 +6,18 @@ require('tokyonight').setup({
 require('dap-python').setup('~/Projects/shm-api/apienv/bin/python')
 require('gitsigns').setup()
 
+require('nvim-treesitter.configs').setup({
+    ensure_installed = "all",
+    sync_install = false,
 
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+    },
+})
+
+
+vim.cmd[[colorscheme tokyonight]]
 
 
 -- DAAAAAAAAAAAAAAAAAAAAAAP UI --
@@ -106,9 +117,6 @@ vim.opt.relativenumber = true
 
 --vim.cmd[[set foldmethod=syntax]]--('autocmd FileType c setlocal foldmethod=syntax')
 
---vim.g.tokyonight_transparent = true 
---vim.g.tokyonight_transparent_sidebar = true
-vim.cmd[[colorscheme tokyonight]]
 
 vim.g.mapleader = ","
 
