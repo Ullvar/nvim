@@ -1,7 +1,8 @@
 require('plugins')
 require('lualine').setup()
 require('tokyonight').setup({
-	transparent = true
+	transparent = true,
+	style = "night",
 })
 require('dap-python').setup('~/Projects/shm-api/apienv/bin/python')
 require('gitsigns').setup()
@@ -17,7 +18,7 @@ require('nvim-treesitter.configs').setup({
 })
 
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme tokyonight-night]]
 
 
 -- DAAAAAAAAAAAAAAAAAAAAAAP UI --
