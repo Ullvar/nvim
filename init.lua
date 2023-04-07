@@ -121,6 +121,9 @@ vim.opt.relativenumber = true
 
 --vim.cmd[[set foldmethod=syntax]]--('autocmd FileType c setlocal foldmethod=syntax')
 
+vim.keymap.set('i', '<M-1>', '<Plug>(copilot-next)')
+vim.keymap.set('i', '<M-2>', '<Plug>(copilot-previous)')
+
 function Ullvar_String_Split(s, delimiter)
     local arr = {}
     local i = 0

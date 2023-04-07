@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
 
   use 'ThePrimeagen/harpoon'
 
-
+  use 'github/copilot.vim'
 
   use 'folke/tokyonight.nvim'
 
