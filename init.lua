@@ -124,7 +124,7 @@ vim.opt.relativenumber = true
 -- Copilot stuff
 vim.keymap.set('i', '<M-1>', '<Plug>(copilot-next)')
 vim.keymap.set('i', '<M-2>', '<Plug>(copilot-previous)')
-vim.keymap.set("i", "<M-3>", 'copilot#Accept("")', {silent = true, expr = true})
+vim.keymap.set("i", "<M-3>", 'copilot#Accept("")', {noremap = true, silent = true, expr = true, replace_keycodes = false })
 vim.g.copilot_no_tab_map = true
 
 function Ullvar_String_Split(s, delimiter)
