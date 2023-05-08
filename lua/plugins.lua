@@ -30,5 +30,18 @@ return require('packer').startup(function(use)
   use "rcarriga/nvim-dap-ui"
   use 'theHamsta/nvim-dap-virtual-text'
   use 'mfussenegger/nvim-dap-python'
+
+  use {
+	  'nvim-tree/nvim-tree.lua',
+	  requires = {
+	    'nvim-tree/nvim-web-devicons', -- optional
+	  },
+	  config = function()
+	    require("nvim-tree").setup {}
+	  end
+  }
+
+  use 'nvim-tree/nvim-web-devicons'
+
 end)
 

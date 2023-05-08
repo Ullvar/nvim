@@ -18,6 +18,19 @@ require('nvim-treesitter.configs').setup({
         additional_vim_regex_highlighting = false,
     },
 })
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup({
+  view = {
+    width = 40,
+  },
+})
 
 
 vim.cmd[[colorscheme tokyonight-night]]
@@ -174,6 +187,9 @@ vim.keymap.set('n', '<leader>[', '<cmd>lua Open_File_In_Github()<cr>', opts)
 vim.keymap.set("n", "<leader>;a", ":lua require('harpoon.mark').add_file()<CR>", {})
 vim.keymap.set("n", "<leader>;t", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", {})
 vim.keymap.set('n', '<leader>k', '<cmd>lua require("harpoon.ui").nav_file(vim.v.count1)<cr>', opts)
+
+
+vim.keymap.set('n', '<leader>tt', '<cmd>:NvimTreeToggle<cr>', {})
 
 --vim.keymap.set('n', '<Esc>h', '<cmd>lua require("harpoon.ui").nav_file(1)<cr>', opts)
 --vim.keymap.set('n', '<Esc>j', '<cmd>lua require("harpoon.ui").nav_file(2)<cr>', opts)
