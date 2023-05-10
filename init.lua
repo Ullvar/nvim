@@ -190,6 +190,7 @@ vim.keymap.set('n', '<leader>k', '<cmd>lua require("harpoon.ui").nav_file(vim.v.
 
 
 vim.keymap.set('n', '<leader>tt', '<cmd>:NvimTreeToggle<cr>', {})
+vim.keymap.set('n', '<leader>tf', '<cmd>:NvimTreeFindFile<cr>', {})
 
 --vim.keymap.set('n', '<Esc>h', '<cmd>lua require("harpoon.ui").nav_file(1)<cr>', opts)
 --vim.keymap.set('n', '<Esc>j', '<cmd>lua require("harpoon.ui").nav_file(2)<cr>', opts)
