@@ -32,9 +32,20 @@ require("nvim-tree").setup({
   },
 })
 
+-- FOLDING SETTUP
+--require('pretty-fold').setup()
+require('ufo').setup()
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 
 vim.cmd[[colorscheme tokyonight-night]]
 
+--local theme_fg = vim.fn.synIDattr(vim.fn.hlID('Normal'), 'fg')
+-- Set custom color for folds
+--vim.api.nvim_command('highlight! Folded guifg=None guibg=black ctermfg=red ctermbg=yellow')
+--vim.api.nvim_command('highlight link Folded Normal')
 
 -- DAAAAAAAAAAAAAAAAAAAAAAP UI --
 require("dapui").setup({
@@ -122,7 +133,9 @@ vim.api.nvim_create_user_command(
 
 vim.g.mapleader = ","
 vim.api.nvim_set_keymap('n', 'zc', 'zf%', { noremap = true })
-
+vim.api.nvim_set_keymap('v', '<leader>c', '"+y', { noremap = true })
+vim.api.nvim_set_keymap('v', '<leader>x', '"+d', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
 
 -- Telescope stuff
 local builtin = require('telescope.builtin')

@@ -43,5 +43,13 @@ return require('packer').startup(function(use)
 
   use 'nvim-tree/nvim-web-devicons'
 
+  use{ 'anuvyklack/pretty-fold.nvim',
+   config = function()
+      require('pretty-fold').setup()
+   end
+  }
+
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
 end)
 
