@@ -121,6 +121,8 @@ vim.api.nvim_create_user_command(
 )
 
 vim.g.mapleader = ","
+vim.api.nvim_set_keymap('n', 'zc', 'zf%', { noremap = true })
+
 
 -- Telescope stuff
 local builtin = require('telescope.builtin')
