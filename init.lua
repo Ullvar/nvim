@@ -133,8 +133,8 @@ vim.api.nvim_create_user_command(
 
 vim.g.mapleader = ","
 vim.api.nvim_set_keymap('n', 'zc', 'zf%', { noremap = true })
-vim.api.nvim_set_keymap('v', '<leader>c', '"+y', { noremap = true })
-vim.api.nvim_set_keymap('v', '<leader>x', '"+d', { noremap = true })
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
+vim.api.nvim_set_keymap('v', '<leader>d', '"+d', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
 
 -- Telescope stuff
