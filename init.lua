@@ -137,6 +137,9 @@ vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>d', '"+d', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
 
+
+vim.api.nvim_set_keymap('n', '<leader>b', '<C-W><C-W>', {noremap = true})
+
 -- Telescope stuff
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
