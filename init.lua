@@ -71,18 +71,18 @@ require("dapui").setup({
   -- Layouts are opened in order so that earlier layouts take priority in window sizing.
    layouts = { {
         elements = { {
-            id = "scopes",
-            size = 0.25
-          }, {
             id = "breakpoints",
-            size = 0.25
+            size = 0.20
           }, {
             id = "stacks",
-            size = 0.25
+            size = 0.20
           }, {
             id = "watches",
             size = 0.25
-          } },
+          }, {
+            id = "scopes",
+            size = 0.35
+          }},
         position = "left",
         size = 40
       }, {
@@ -94,7 +94,7 @@ require("dapui").setup({
             size = 0.5
           } },
         position = "bottom",
-        size = 10
+        size = 20
       } },
   controls = {
     -- Requires Neovim nightly (or 0.8 when released)
@@ -138,6 +138,16 @@ vim.api.nvim_create_user_command(
 )
 
 vim.g.mapleader = ","
+
+
+vim.api.nvim_set_keymap('n', '<leader>du', '<cmd>lua require("dapui").toggle()<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>dc', '<cmd>:DapContinue<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>i', '<cmd>:DapStepInto<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>:DapStepOver<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>db', '<cmd>:DapToggleBreakpoint<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>dt', '<cmd>:DapTerminate<cr>', { noremap = true })
+
+
 vim.api.nvim_set_keymap('n', 'zc', 'zf%', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>d', '"+d', { noremap = true })
