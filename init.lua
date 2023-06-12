@@ -6,6 +6,10 @@ require('tokyonight').setup({
 })
 require('dap-python').setup('~/Projects/shm-api/apienv/bin/python')
 require('gitsigns').setup()
+require("copilot").setup({filetypes={
+  ["dap-repl"] = false
+}})
+
 
 require('nvim-treesitter.configs').setup({
     ensure_installed = "all",
