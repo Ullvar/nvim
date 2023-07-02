@@ -1,5 +1,31 @@
 {
-  "python.formatting.provider": "black",
-  "Lua.telemetry.enable": false,
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "python", "typescript", "yaml", "rust", "go"]
+	"python.formatting.provider": "black",
+	"Lua.telemetry.enable": false,
+	"coc.preferences.formatOnSaveFiletypes": [
+		"javascript",
+		"javascriptreact",
+		"python",
+		"typescript",
+		"yaml",
+		"rust",
+		"go"
+	],
+	"languageserver": {
+		"go": {
+			"command": "gopls",
+			"rootPatterns": [
+				"go.work",
+				"go.mod",
+				".vim/",
+				".git/",
+				".hg/"
+			],
+			"filetypes": [
+				"go"
+			],
+			"initializationOptions": {
+				"usePlaceholders": true
+			}
+		}
+	}
 }
