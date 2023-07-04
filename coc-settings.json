@@ -27,5 +27,6 @@
 				"usePlaceholders": true
 			}
 		}
-	}
+	},
+	"javascript.suggestionActions.enabled": false
 }
