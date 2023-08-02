@@ -4,6 +4,26 @@ require('tokyonight').setup({
 	transparent = true,
 	style = "night",
 })
+
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup({
+  view = {
+    width = 40,
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+  },
+})
+
 require('dap-python').setup('~/Projects/shm-api/apienv/bin/python')
 require('gitsigns').setup()
 --require("copilot").setup({filetypes={
@@ -20,19 +40,6 @@ require('nvim-treesitter.configs').setup({
         enable = true,
         additional_vim_regex_highlighting = false,
     },
-})
--- disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
-
--- empty setup using defaults
-require("nvim-tree").setup({
-  view = {
-    width = 40,
-  },
 })
 
 -- FOLDING SETTUP
