@@ -16,6 +16,7 @@ vim.opt.termguicolors = true
 require("nvim-tree").setup({
   view = {
     width = 40,
+    relativenumber = true
   },
   actions = {
     open_file = {
