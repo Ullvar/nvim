@@ -5,14 +5,12 @@ require('tokyonight').setup({
 	style = "night",
 })
 
--- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
--- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
+vim.opt.nu = true
+vim.opt.relativenumber = true
 
--- empty setup using defaults
 require("nvim-tree").setup({
   view = {
     width = 40,
@@ -25,11 +23,7 @@ require("nvim-tree").setup({
   },
 })
 
-require('dap-python').setup('~/Projects/shm-api/apienv/bin/python')
 require('gitsigns').setup()
---require("copilot").setup({filetypes={
---  ["dap-repl"] = false
---}})
 
 require('nvim-treesitter.configs').setup({
     ensure_installed = "all",
@@ -44,101 +38,13 @@ require('nvim-treesitter.configs').setup({
 })
 
 -- FOLDING SETTUP
---require('pretty-fold').setup()
 require('ufo').setup()
-vim.o.foldcolumn = '1' -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldcolumn = '1'
+vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
 vim.cmd[[colorscheme tokyonight-night]]
-
---local theme_fg = vim.fn.synIDattr(vim.fn.hlID('Normal'), 'fg')
--- Set custom color for folds
---vim.api.nvim_command('highlight! Folded guifg=None guibg=black ctermfg=red ctermbg=yellow')
---vim.api.nvim_command('highlight link Folded Normal')
-
--- DAAAAAAAAAAAAAAAAAAAAAAP UI --
-require("dapui").setup({
-  icons = { expanded = "▾", collapsed = "▸", current_frame = "▸" },
-  mappings = {
-    -- Use a table to apply multiple mappings
-    expand = { "<CR>", "<2-LeftMouse>" },
-    open = "o",
-    remove = "d",
-    edit = "e",
-    repl = "r",
-    toggle = "t",
-  },
-  -- Expand lines larger than the window
-  -- Requires >= 0.7
-  expand_lines = vim.fn.has("nvim-0.7") == 1,
-  -- Layouts define sections of the screen to place windows.
-  -- The position can be "left", "right", "top" or "bottom".
-  -- The size specifies the height/width depending on position. It can be an Int
-  -- or a Float. Integer specifies height/width directly (i.e. 20 lines/columns) while
-  -- Float value specifies percentage (i.e. 0.3 - 30% of available lines/columns)
-  -- Elements are the elements shown in the layout (in order).
-  -- Layouts are opened in order so that earlier layouts take priority in window sizing.
-   layouts = { {
-        elements = { {
-            id = "breakpoints",
-            size = 0.20
-          }, {
-            id = "stacks",
-            size = 0.20
-          }, {
-            id = "watches",
-            size = 0.25
-          }, {
-            id = "scopes",
-            size = 0.35
-          }},
-        position = "left",
-        size = 40
-      }, {
-        elements = { {
-            id = "repl",
-            size = 0.5
-          }, {
-            id = "console",
-            size = 0.5
-          } },
-        position = "bottom",
-        size = 20
-      } },
-  controls = {
-    -- Requires Neovim nightly (or 0.8 when released)
-    enabled = true,
-    -- Display controls in this element
-    element = "repl",
-    icons = {
-      pause = "",
-      play = "",
-      step_into = "",
-      step_over = "",
-      step_out = "",
-      step_back = "",
-      run_last = "↻",
-      terminate = "□",
-    },
-  },
-  floating = {
-    max_height = nil, -- These can be integers or a float between 0 and 1.
-    max_width = nil, -- Floats will be treated as percentage of your screen.
-    border = "single", -- Border style. Can be "single", "double" or "rounded"
-    mappings = {
-      close = { "q", "<Esc>" },
-    },
-  },
-  windows = { indent = 1 },
-  render = {
-    max_type_length = nil, -- Can be integer or nil.
-    max_value_lines = 100, -- Can be integer or nil.
-  }
-})
--- DAAAAAAAAAAAAAAAAAAAAAAP UI --
-
 
 vim.api.nvim_create_user_command(
     'Format',
@@ -150,27 +56,15 @@ vim.api.nvim_create_user_command(
 
 vim.g.mapleader = ","
 
-
-vim.api.nvim_set_keymap('n', '<leader>du', '<cmd>lua require("dapui").toggle()<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>dc', '<cmd>:DapContinue<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>i', '<cmd>:DapStepInto<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>:DapStepOver<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>db', '<cmd>:DapToggleBreakpoint<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>dt', '<cmd>:DapTerminate<cr>', { noremap = true })
-
-
 vim.api.nvim_set_keymap('n', 'zc', 'zf%', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>d', '"+d', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
 
--- Keybindings.lua
-
 vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd j<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd h<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', { silent = true })
-
 
 vim.api.nvim_set_keymap('n', '<leader>b', '<C-W><C-W>', {noremap = true})
 
@@ -180,11 +74,6 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
---vim.cmd[[set foldmethod=syntax]]--('autocmd FileType c setlocal foldmethod=syntax')
 
 -- Copilot stuff
 vim.keymap.set('i', '<M-1>', '<Plug>(copilot-next)')
@@ -220,19 +109,6 @@ function Open_File_In_Github()
 	vim.cmd(cmd)
 end
 
-function see_pr(pullNr)
-	local branch = vim.fn.system("git branch --show-current 2> /dev/null | tr -d '\n'")
-	local remoteUrl = vim.fn.system("git config --get remote.origin.url 2> /dev/null | tr -d '\n'")
-        local remoteTrim = remoteUrl:gsub("%.git", "")
-
-	if branch ~= "" then
-		vim.cmd('!open ' .. remoteTrim .. '/pull/' .. pullNr)
-		return
-	else
-		return ""
-	end
-end
---vim.keymap.set('n', '<leader>[', '<cmd>lua see_pr(vim.v.count1)<cr>', opts)
 vim.keymap.set('n', '<leader>[', '<cmd>lua Open_File_In_Github()<cr>', opts)
 
 -- Harpoon stuff
@@ -244,11 +120,11 @@ vim.keymap.set('n', '<leader>k', '<cmd>lua require("harpoon.ui").nav_file(vim.v.
 vim.keymap.set('n', '<leader>tt', '<cmd>:NvimTreeToggle<cr>', {})
 vim.keymap.set('n', '<leader>tf', '<cmd>:NvimTreeFindFile<cr>', {})
 
---vim.keymap.set('n', '<Esc>h', '<cmd>lua require("harpoon.ui").nav_file(1)<cr>', opts)
---vim.keymap.set('n', '<Esc>j', '<cmd>lua require("harpoon.ui").nav_file(2)<cr>', opts)
---vim.keymap.set('n', '<Esc>k', '<cmd>lua require("harpoon.ui").nav_file(3)<cr>', opts)
---vim.keymap.set('n', '<Esc>l', '<cmd>lua require("harpoon.ui").nav_file(4)<cr>', opts)
---
+vim.keymap.set('n', '<Esc>h', '<cmd>lua require("harpoon.ui").nav_file(1)<cr>', opts)
+vim.keymap.set('n', '<Esc>j', '<cmd>lua require("harpoon.ui").nav_file(2)<cr>', opts)
+vim.keymap.set('n', '<Esc>k', '<cmd>lua require("harpoon.ui").nav_file(3)<cr>', opts)
+vim.keymap.set('n', '<Esc>l', '<cmd>lua require("harpoon.ui").nav_file(4)<cr>', opts)
+
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
 
 local hl = function(thing, opts)
