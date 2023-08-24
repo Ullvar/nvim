@@ -13,7 +13,7 @@ vim.opt.relativenumber = true
 
 require("nvim-tree").setup({
   view = {
-    width = 40,
+    width = 100,
     relativenumber = true
   },
   actions = {
