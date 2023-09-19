@@ -112,18 +112,19 @@ end
 vim.keymap.set('n', '<leader>[', '<cmd>lua Open_File_In_Github()<cr>', opts)
 
 -- Harpoon stuff
-vim.keymap.set("n", "<leader>;a", ":lua require('harpoon.mark').add_file()<CR>", {})
-vim.keymap.set("n", "<leader>;t", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", {})
+vim.keymap.set("n", "<leader>g", ":lua require('harpoon.mark').add_file()<CR>", {})
+vim.keymap.set("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", {})
+
 vim.keymap.set('n', '<leader>k', '<cmd>lua require("harpoon.ui").nav_file(vim.v.count1)<cr>', opts)
 
 
 vim.keymap.set('n', '<leader>tt', '<cmd>:NvimTreeToggle<cr>', {})
 vim.keymap.set('n', '<leader>tf', '<cmd>:NvimTreeFindFile<cr>', {})
 
---Vim.keymap.set('n', '<Esc>h', '<cmd>lua require("harpoon.ui").nav_file(1)<cr>', opts)
---Vim.keymap.set('n', '<Esc>j', '<cmd>lua require("harpoon.ui").nav_file(2)<cr>', opts)
---Vim.keymap.set('n', '<Esc>k', '<cmd>lua require("harpoon.ui").nav_file(3)<cr>', opts)
---Vim.keymap.set('n', '<Esc>l', '<cmd>lua require("harpoon.ui").nav_file(4)<cr>', opts)
+vim.keymap.set('n', '<leader>1', '<cmd>lua require("harpoon.ui").nav_file(1)<cr>', opts)
+vim.keymap.set('n', '<leader>2', '<cmd>lua require("harpoon.ui").nav_file(2)<cr>', opts)
+vim.keymap.set('n', '<leader>3', '<cmd>lua require("harpoon.ui").nav_file(3)<cr>', opts)
+vim.keymap.set('n', '<leader>4', '<cmd>lua require("harpoon.ui").nav_file(4)<cr>', opts)
 
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
 
