@@ -10,8 +10,14 @@
 		"rust",
 		"go",
 		"typescriptreact",
+    "terraform",
 	],
 	"languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    },
 		"go": {
 			"command": "gopls",
 			"rootPatterns": [
