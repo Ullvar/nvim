@@ -1,40 +1,32 @@
 {
-	"python.formatting.provider": "black",
-	"Lua.telemetry.enable": false,
-	"coc.preferences.formatOnSaveFiletypes": [
-		"javascript",
-		"javascriptreact",
-		"python",
-		"typescript",
-		"yaml",
-		"rust",
-		"go",
-		"typescriptreact",
-    "terraform",
-	],
-	"languageserver": {
+  "python.formatting.provider": "black",
+  "Lua.telemetry.enable": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "python",
+    "typescript",
+    "yaml",
+    "rust",
+    "go",
+    "typescriptreact",
+    "terraform"
+  ],
+  "languageserver": {
     "terraform": {
       "command": "terraform-lsp",
       "filetypes": ["terraform"],
       "initializationOptions": {}
     },
-		"go": {
-			"command": "gopls",
-			"rootPatterns": [
-				"go.work",
-				"go.mod",
-				".vim/",
-				".git/",
-				".hg/"
-			],
-			"filetypes": [
-				"go"
-			],
-			"initializationOptions": {
-				"usePlaceholders": true
-			}
-		}
-	},
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    }
+  },
   "javascript.suggestionActions.enabled": false,
   "coc.preferences.extensionUpdateCheck": "daily"
 }
