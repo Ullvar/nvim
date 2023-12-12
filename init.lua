@@ -11,6 +11,9 @@ vim.opt.termguicolors = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.opt.spelllang = 'en_gb'
+vim.opt.spell = true
+
 require("nvim-tree").setup({
   view = {
     width = 100,
