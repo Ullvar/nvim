@@ -42,5 +42,20 @@ return require('packer').startup(function(use)
 
   use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
+  use {
+  'pwntester/octo.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim',
+    'nvim-telescope/telescope.nvim',
+    'nvim-tree/nvim-web-devicons',
+  },
+  config = function ()
+    require"octo".setup()
+  end
+  }
+
+  use 'tpope/vim-dadbod'
+  use 'kristijanhusak/vim-dadbod-ui'
+
 end)
 
