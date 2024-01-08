@@ -42,5 +42,8 @@ return require('packer').startup(function(use)
 
   use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
+  use 'tpope/vim-dadbod'
+  use 'kristijanhusak/vim-dadbod-ui'
+
 end)
 
