@@ -54,8 +54,5 @@ return require('packer').startup(function(use)
   end
   }
 
-  use 'tpope/vim-dadbod'
-  use 'kristijanhusak/vim-dadbod-ui'
-
 end)
 
