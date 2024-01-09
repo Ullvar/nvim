@@ -1,49 +1,56 @@
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  use "nvim-lua/plenary.nvim"
-  use {'neoclide/coc.nvim', branch = 'release'}
-  use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	-- Packer can manage itself
+	use 'wbthomason/packer.nvim'
+
+	use "nvim-lua/plenary.nvim"
+
+	use { 'neoclide/coc.nvim', branch = 'release' }
+
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
-  use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-}
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
 
-  use {
-   'lewis6991/gitsigns.nvim'
-  }
+	use 'nvim-telescope/telescope-ui-select.nvim'
 
-  use 'ThePrimeagen/harpoon'
+	use 'nvim-telescope/telescope.nvim'
 
-  use 'github/copilot.vim'
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
 
-  use 'folke/tokyonight.nvim'
+	use 'lewis6991/gitsigns.nvim'
 
-  use 'nvim-tree/nvim-web-devicons'
+	use 'ThePrimeagen/harpoon'
 
-  use {
-     'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional
-      },
-  }
+	use 'github/copilot.vim'
 
-  use{ 'anuvyklack/pretty-fold.nvim',
-   config = function()
-      require('pretty-fold').setup()
-   end
-  }
+	use 'folke/tokyonight.nvim'
 
-  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+	use 'nvim-tree/nvim-web-devicons'
 
-  use 'tpope/vim-dadbod'
-  use 'kristijanhusak/vim-dadbod-ui'
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons', -- optional
+		},
+	}
 
+	use { 'anuvyklack/pretty-fold.nvim',
+		config = function()
+			require('pretty-fold').setup()
+		end
+	}
+
+	use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+
+	use 'tpope/vim-dadbod'
+
+	use 'kristijanhusak/vim-dadbod-ui'
+
+	use {
+		'ldelossa/gh.nvim',
+		requires = { { 'ldelossa/litee.nvim' } }
+	}
 end)
-

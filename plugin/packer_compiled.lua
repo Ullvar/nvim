@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/ullvarbrekke/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["gh.nvim"] = {
+    loaded = true,
+    path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/gh.nvim",
+    url = "https://github.com/ldelossa/gh.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -93,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["litee.nvim"] = {
+    loaded = true,
+    path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/litee.nvim",
+    url = "https://github.com/ldelossa/litee.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -140,6 +150,11 @@ _G.packer_plugins = {
     path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/promise-async",
     url = "https://github.com/kevinhwang91/promise-async"
   },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -149,6 +164,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/vim-dadbod",
+    url = "https://github.com/tpope/vim-dadbod"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
+    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
   }
 }
 
