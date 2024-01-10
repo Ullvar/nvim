@@ -59,7 +59,7 @@ vim.api.nvim_create_user_command(
     { nargs = 1 }
 )
 
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 
 vim.api.nvim_set_keymap('n', 'zc', 'zf%', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
