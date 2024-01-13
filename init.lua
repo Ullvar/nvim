@@ -50,6 +50,7 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
 vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[highlight NvimTreeNormal guibg=black]]
 
 vim.api.nvim_create_user_command(
     'Format',
