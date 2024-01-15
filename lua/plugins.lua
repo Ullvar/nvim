@@ -48,9 +48,4 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-dadbod'
 
 	use 'kristijanhusak/vim-dadbod-ui'
-
-	use {
-		'ldelossa/gh.nvim',
-		requires = { { 'ldelossa/litee.nvim' } }
-	}
 end)
