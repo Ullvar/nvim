@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  ["gh.nvim"] = {
-    loaded = true,
-    path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/gh.nvim",
-    url = "https://github.com/ldelossa/gh.nvim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -98,11 +93,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
-  },
-  ["litee.nvim"] = {
-    loaded = true,
-    path = "/Users/ullvarbrekke/.local/share/nvim/site/pack/packer/start/litee.nvim",
-    url = "https://github.com/ldelossa/litee.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
