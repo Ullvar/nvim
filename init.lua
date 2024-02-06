@@ -67,6 +67,7 @@ vim.g.mapleader = " "
 vim.keymap.set('n', '<Tab>', '<cmd>:BufferLineCycleNext<cr>', {})
 vim.keymap.set('n', '<S-Tab>', '<cmd>:BufferLineCyclePrev<cr>', {})
 vim.keymap.set('n', '<leader>w', '<cmd>:bdelete!<cr>', {})
+vim.keymap.set('n', '<leader>bl', '<cmd>:BufferLinePick<cr>', {})
 
 vim.api.nvim_set_keymap('n', 'zc', 'zf%', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
