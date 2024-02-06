@@ -42,6 +42,8 @@ require('nvim-treesitter.configs').setup({
     },
 })
 
+require("bufferline").setup{}
+
 -- FOLDING SETTUP
 require('ufo').setup()
 vim.o.foldcolumn = '0'
@@ -61,6 +63,10 @@ vim.api.nvim_create_user_command(
 )
 
 vim.g.mapleader = " "
+
+vim.keymap.set('n', '<Tab>', '<cmd>:BufferLineCycleNext<cr>', {})
+vim.keymap.set('n', '<S-Tab>', '<cmd>:BufferLineCyclePrev<cr>', {})
+vim.keymap.set('n', '<leader>w', '<cmd>:bdelete!<cr>', {})
 
 vim.api.nvim_set_keymap('n', 'zc', 'zf%', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
@@ -358,3 +364,5 @@ keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
 keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 -- Resume latest coc list.
 keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
+
+
