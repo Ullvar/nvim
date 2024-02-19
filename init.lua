@@ -65,7 +65,7 @@ vim.api.nvim_create_user_command(
 vim.g.mapleader = " "
 
 vim.keymap.set('n', '<Tab>', '<cmd>:BufferLineCycleNext<cr>', {})
-vim.keymap.set('n', '<S-Tab>', '<cmd>:BufferLineCyclePrev<cr>', {})
+vim.keymap.set('n', '<BS>', '<cmd>:BufferLineCyclePrev<cr>', {})
 vim.keymap.set('n', '<leader>w', '<cmd>:bdelete!<cr>', {})
 vim.keymap.set('n', '<leader>bl', '<cmd>:BufferLinePick<cr>', {})
 
