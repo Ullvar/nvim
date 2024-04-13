@@ -1,5 +1,4 @@
-return require('packer').startup(function(use)
-	-- Packer can manage itself
+require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	use "nvim-lua/plenary.nvim"
@@ -22,20 +21,13 @@ return require('packer').startup(function(use)
 
 	use 'lewis6991/gitsigns.nvim'
 
-	use 'ThePrimeagen/harpoon'
-
 	use 'github/copilot.vim'
 
 	use 'folke/tokyonight.nvim'
 
 	use 'nvim-tree/nvim-web-devicons'
 
-	use {
-		'nvim-tree/nvim-tree.lua',
-		requires = {
-			'nvim-tree/nvim-web-devicons', -- optional
-		},
-	}
+	use 'nvim-tree/nvim-tree.lua'
 
 	use { 'anuvyklack/pretty-fold.nvim',
 		config = function()

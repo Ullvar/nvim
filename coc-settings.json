@@ -1,16 +1,4 @@
 {
-  "python.formatting.provider": "black",
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "javascriptreact",
-    "python",
-    "typescript",
-    "yaml",
-    "rust",
-    "go",
-    "typescriptreact",
-    "terraform"
-  ],
   "languageserver": {
     "terraform": {
       "command": "terraform-lsp",
@@ -26,6 +14,7 @@
       }
     }
   },
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
   "javascript.suggestionActions.enabled": false,
-  "coc.preferences.extensionUpdateCheck": "daily"
 }
