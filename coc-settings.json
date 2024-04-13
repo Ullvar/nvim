@@ -1,6 +1,5 @@
 {
   "python.formatting.provider": "black",
-  "Lua.telemetry.enable": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "javascriptreact",
