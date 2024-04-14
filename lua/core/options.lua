@@ -3,8 +3,10 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.spelllang = 'en_gb'
 vim.opt.spell = true
+vim.opt.scrolloff = 10
+vim.opt.hlsearch = true
+
 vim.o.foldcolumn = '0'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
-vim.o.scrolloff = 10
