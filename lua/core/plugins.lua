@@ -42,4 +42,6 @@ require('packer').startup(function(use)
 	use 'kristijanhusak/vim-dadbod-ui'
 
 	use 'akinsho/bufferline.nvim'
+
+  use 'folke/trouble.nvim'
 end)
