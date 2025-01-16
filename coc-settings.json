@@ -19,13 +19,5 @@
   "coc.preferences.formatOnSave": true,
   "coc.preferences.extensionUpdateCheck": "daily",
   "pyright.inlayHints.parameterTypes": false,
-  "javascript.suggestionActions.enabled": false,
-  "go.goplsOptions": {
-    "usePlaceholders": true,
-    "completeUnimported": true,
-    "analyses": {
-      "unusedparams": true
-    },
-    "staticcheck": true
-  }
+  "javascript.suggestionActions.enabled": false
 }
