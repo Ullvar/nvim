@@ -17,7 +17,5 @@
     }
   },
   "coc.preferences.formatOnSave": true,
-  "coc.preferences.extensionUpdateCheck": "daily",
-  "pyright.inlayHints.parameterTypes": false,
-  "javascript.suggestionActions.enabled": false
+  "coc.preferences.extensionUpdateCheck": "daily"
 }
