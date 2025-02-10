@@ -21,7 +21,6 @@ require('packer').startup(function(use)
 
 	use 'lewis6991/gitsigns.nvim'
 
-	use 'github/copilot.vim'
 
 	use 'folke/tokyonight.nvim'
 
@@ -37,11 +36,12 @@ require('packer').startup(function(use)
 
 	use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
-	use 'tpope/vim-dadbod'
-
-	use 'kristijanhusak/vim-dadbod-ui'
-
 	use 'akinsho/bufferline.nvim'
 
   use 'folke/trouble.nvim'
+
+	-- use 'tpope/vim-dadbod'
+	-- use 'kristijanhusak/vim-dadbod-ui'
+  -- use 'github/copilot.vim'
+
 end)
