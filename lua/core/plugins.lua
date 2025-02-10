@@ -21,7 +21,6 @@ require('packer').startup(function(use)
 
 	use 'lewis6991/gitsigns.nvim'
 
-
 	use 'folke/tokyonight.nvim'
 
 	use 'nvim-tree/nvim-web-devicons'
