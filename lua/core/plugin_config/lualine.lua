@@ -1,1 +1,3 @@
-require('lualine').setup()
+return function()
+    require('lualine').setup()
+end

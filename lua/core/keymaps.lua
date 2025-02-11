@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 vim.keymap.set('n', '<Esc>', '<cmd>:noh<cr>', {})
 
 vim.keymap.set('n', '<Tab>', '<cmd>:BufferLineCycleNext<cr>', {})
@@ -18,18 +16,6 @@ vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd h<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', { silent = true })
 
 vim.api.nvim_set_keymap('n', '<leader>b', '<C-W><C-W>', { noremap = true })
-
-local telescope_builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
-vim.keymap.set('n', '<leader>gd', telescope_builtin.git_status, {})
-
-vim.keymap.set('i', '<M-1>', '<Plug>(copilot-next)')
-vim.keymap.set('i', '<M-2>', '<Plug>(copilot-previous)')
-vim.keymap.set("i", "<M-3>", 'copilot#Accept("")',
-  { noremap = true, silent = true, expr = true, replace_keycodes = false })
 
 vim.keymap.set('n', '<leader>[', '<cmd>lua Open_File_In_Github()<cr>', opts)
 
@@ -69,18 +55,13 @@ vim.keymap.set("n", "gr", "<Plug>(coc-references)", { silent = true })
 vim.keymap.set("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
 vim.keymap.set("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
 vim.keymap.set("n", "<leader>ac", "<Plug>(coc-codeaction)", { silent = true, nowait = true })
+vim.keymap.set("n", "<space>s", ":<C-u>CocList -I symbols<cr>", { silent = true })
+vim.keymap.set("n", "<space>a", ":<C-u>CocList diagnostics<cr>", { silent = true })
 
 vim.api.nvim_create_user_command("Format", "call CocAction('format')", {})
 vim.api.nvim_create_user_command("Fold", "call CocAction('fold', <f-args>)", { nargs = '?' })
 vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'editor.action.organizeImport')", {})
 vim.api.nvim_create_user_command("RN", "call CocActionAsync('runCommand', 'workspace.renameCurrentFile')", {})
-
-vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
-vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
-vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
-vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
-vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
-vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
 
 vim.keymap.set('n', '<leader>j', '<cmd>:cn<cr>', {})
 vim.keymap.set('n', '<leader>k', '<cmd>:cp<cr>', {})
