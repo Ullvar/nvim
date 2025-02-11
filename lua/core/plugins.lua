@@ -104,4 +104,7 @@ require("lazy").setup({
       }
     }
   },
+
+  { "RRethy/vim-illuminate" }
+
 })
