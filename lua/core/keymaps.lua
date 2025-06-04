@@ -18,6 +18,7 @@ vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<leader>b', '<C-W><C-W>', { noremap = true })
 
 vim.keymap.set('n', '<leader>[', '<cmd>lua Open_File_In_Github()<cr>', opts)
+vim.api.nvim_set_keymap('n', '<leader>dt', ':lua InsertDateTime()<CR>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<leader>tt', '<cmd>:NvimTreeToggle<cr>', {})
 vim.keymap.set('n', '<leader>tf', '<cmd>:NvimTreeFindFile<cr>', {})
