@@ -66,3 +66,8 @@ vim.api.nvim_create_user_command("RN", "call CocActionAsync('runCommand', 'works
 
 vim.keymap.set('n', '<leader>j', '<cmd>:cn<cr>', {})
 vim.keymap.set('n', '<leader>k', '<cmd>:cp<cr>', {})
+
+vim.keymap.set('i', '<M-1>', '<Plug>(copilot-next)')
+vim.keymap.set('i', '<M-2>', '<Plug>(copilot-previous)')
+vim.keymap.set("i", "<M-3>", 'copilot#Accept("")',
+  { noremap = true, silent = true, expr = true, replace_keycodes = false })
