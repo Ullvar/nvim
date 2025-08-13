@@ -1,7 +1,7 @@
 return function()
   require("nvim-tree").setup({
     view = {
-      width = 100,
+      width = 65,
       relativenumber = true
     },
     actions = {
