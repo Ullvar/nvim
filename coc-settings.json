@@ -17,5 +17,5 @@
     }
   },
   "coc.preferences.formatOnSave": true,
-  "coc.preferences.extensionUpdateCheck": "daily"
+  "inlayHint.enable": false
 }
