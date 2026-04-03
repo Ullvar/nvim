@@ -1,5 +1,7 @@
 vim.keymap.set('n', '<Esc>', '<cmd>:noh<cr>', {})
 
+vim.keymap.set("n", "<leader>,", "<cmd>:BufferLineMovePrev<cr>", { })
+vim.keymap.set("n", "<leader>.", "<cmd>:BufferLineMoveNext<cr>", { })
 vim.keymap.set('n', '<Tab>', '<cmd>:BufferLineCycleNext<cr>', {})
 vim.keymap.set('n', '<BS>', '<cmd>:BufferLineCyclePrev<cr>', {})
 vim.keymap.set('n', '<leader>w', '<cmd>:bdelete!<cr>', {})
