@@ -41,6 +41,8 @@ require("lazy").setup({
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
+    lazy = false,
+    branch = 'main',
     config = require("core.plugin_config.tree_sitter")
   },
 
