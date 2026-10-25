@@ -112,6 +112,25 @@ require("lazy").setup({
   { "github/copilot.vim" },
 
   {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {
+      spec = {
+        { "<leader>o", group = "GitHub (Octo)" },
+      },
+    },
+    keys = {
+      {
+        "<leader>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer local keymaps (which-key)"
+      }
+    }
+  },
+
+  {
     "pwntester/octo.nvim",
     cmd = "Octo",
     dependencies = {
