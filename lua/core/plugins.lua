@@ -141,6 +141,9 @@ require("lazy").setup({
     opts = {
       picker = "telescope",
       enable_builtin = true,
+      file_panel = {
+        size = 15,
+      },
     },
     keys = {
       {
