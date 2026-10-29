@@ -109,8 +109,6 @@ require("lazy").setup({
 
   { "RRethy/vim-illuminate" },
 
-  { "github/copilot.vim" },
-
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
