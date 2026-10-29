@@ -31,5 +31,8 @@
   },
   "coc.preferences.formatOnSave": true,
   "prettier.formatterPriority": 1,
-  "inlayHint.enable": false
+  "inlayHint.enable": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://www.schemastore.org": true
+  }
 }
