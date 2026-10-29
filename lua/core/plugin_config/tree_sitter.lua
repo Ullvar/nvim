@@ -6,7 +6,7 @@ return function()
     "markdown_inline", "dockerfile", "git_config", "git_rebase",
     "gitattributes", "gitcommit", "gitignore", "helm", "hjson",
     "json", "json5", "jsdoc", "jq", "make", "proto", "rust",
-    "sql", "ssh_config", "tmux", "toml", "xml", "yaml", "zig",
+    "sql", "ssh_config", "toml", "xml", "yaml", "zig",
     "bash", "diff",
   })
 
